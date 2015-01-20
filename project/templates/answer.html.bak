@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Home</title>
+  <style type="text/css">
+	body {background-color:white;
+	
+		  
+		  }
+	
+	h3 {color:red; }
+	
+	h4 {float:right;
+		color:red; 
+	}
+</style>
+	<h4><img src="success.jpeg" width="40" height="40"/></h4>
+	<h4>UserName</h4>
+  <link rel="stylesheet" href="/static/home.css" type="text/css"/>
+  <link rel="stylesheet" type="text/css" href="/static/default.css" />
+  <link rel="stylesheet" type="text/css" href="/static/component.css" />
+  
+ </head>
+ <body class="body">
+ <header class="mainhead">
+ <img src="/static/success.jpeg" width="1400" height="200"/><nav>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Account</a>
+			<ul>
+				<li><a href="profile.html">Profile</a></li>
+				<li><a href="index.html">Logout</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Notifications</a>
+		
+		</li>
+		<li><a href="askque.html">Ask Question</a></li>	
+		<li><a href="yourque.html">Your Questions</a></li>	
+		<li><a href="">Open Questions</a></li>
+			
+		<li><a href="aboutus.html">About Us</a></li>
+	
+	</ul>
+	<aside class="sideinfo">
+		<article>
+		<a href="sector?sectornm.html"><h3>sport</h3></a>
+		
+		</article>
+    </aside>
+
+
+
+</nav>
+	<div class="main">
+			<ul class="cbp_tmtimeline">
+				<li>
+				<time class="cbp_tmtime" datetime="2013-04-10 18:30">{{q.date_created.date}}</time>
+					<div class="cbp_tmicon cbp_tmicon-phone"></div>
+						<div class="cbp_tmlabel">
+						<h2>{{que}}</h2>
+						<form action="" method="POST">
+						{% csrf_token %}
+							<p>Your Answer<br>
+							{{form.ans}}<br></p>
+				
+							<input type="submit" value="Submit" /></input>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+<footer class="mainfooter">
+ <p> copyright &copy;2014</p>
+ </footer>
+ </body>
+</html>

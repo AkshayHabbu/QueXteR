@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Log-in - CodePen</title>
+
+  <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+
+    <link rel="stylesheet" href="/static/login_style.css"  type="text/css" />
+
+</head>
+
+<body>
+
+  <div class="login-card" align="center">
+    <h1>Log-in</h1><br>
+  <form method="POST">
+  {% csrf_token %}
+    <fieldset id="inputs">
+        {{login_form.username}}{% if login_form.username.errors %}{{login_form.username.errors}}{% endif %}
+    </fieldset>
+	<fieldset id="inputs"> 
+        {{login_form.password}}{% if login_form.password.errors %}{{login_form.password.errors}}{% endif %}
+    </fieldset>
+	  <a href="home.html"><input type="submit" id="submit" value="Log in"></a>
+	</form>
+  <div class="login-help">
+    <a href="register.html">Register</a> • <a href="#">Forgot Password</a>
+  </div>
+</div>
+</body>
+

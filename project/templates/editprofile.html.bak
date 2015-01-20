@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+<title>Registration</title>
+<style type="text/css">
+ body {background-color:white;
+		  
+		  background-repeat:no-repeat;
+		 		  
+		}
+ h3{font-family: Calibri; font-size: 22pt; font-style: normal; font-weight: bold; color:SlateBlue;
+text-align: center; text-decoration: underline }
+table{font-family: Calibri; color:white; font-size: 11pt; font-style: normal;width:100%;text-align:left; background-color: SlateBlue; border-collapse: collapse; border: 2px solid navy}
+table.inner{border: 0px}
+.subbutton{
+margin-bottom:2%;
+}
+</style>
+</head>
+ 
+<body>
+<h3>EDIT PROFILE:</h3>
+<div><form method="POST">
+ {% csrf_token %}
+<table align="center" cellpadding = "10">
+ 
+{{editeduser.as_table}}<br>{{editedprofile.as_table}}
+
+</div>
+<a href="/Profile_edit_succesful" >Save Changes</a>
+
+
+</form>
+
+</body>
+ 
+</html>
